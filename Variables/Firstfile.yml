@@ -1,0 +1,13 @@
+---
+- hosts: ubuntu
+  become: yes
+  gather_facts: no
+  tasks:
+  - name: Install apche using variables
+    apt: 
+      name: "{{ packagename }}"
+      state: present
+  - name: Start Service
+    service:
+       name: "{{ packagename }}"
+       state: started
