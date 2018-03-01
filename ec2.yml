@@ -1,7 +1,0 @@
----
-- hosts: all
-  become: yes
-  tasks:
-  - name: start ec2 instances
-    ec2:
-      state: present

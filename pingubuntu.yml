@@ -1,5 +1,0 @@
----
-- hosts: ubuntu
-  tasks:
-   - name: ping ubuntu  machines
-     ping:

@@ -1,8 +1,0 @@
----
-- hosts: redhat
-  tasks:
-    yum:
-     - name: httpd
-       state: present
-    service:
-       state: start

@@ -1,8 +1,0 @@
----
-- hosts: ubuntu
-  become: yes
-  tasks:
-  - name: uninstall tomcat7 on ubuntu using vars
-    apt:
-      name: "{{ packagename }}"
-      state: "{{ status }}"

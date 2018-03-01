@@ -1,5 +1,0 @@
----
-- hosts: redhat
-  tasks: 
-   - name: ping webservers
-     ping:
