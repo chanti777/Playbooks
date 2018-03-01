@@ -1,0 +1,8 @@
+---
+- hosts: ubuntu
+  become: yes
+  tasks:
+  - name: Uninstall Tomcat7
+    apt:
+      name: tomcat7
+      state: absent

@@ -1,0 +1,8 @@
+---
+- hosts: redhat
+  become: yes
+  tasks:
+  - name: copy module
+    copy:
+      src: /var/log/*
+      dest: /tmp/

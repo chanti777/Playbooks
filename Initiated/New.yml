@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: create a user
+    user:
+      name: chandu
+      shell: /bin/bash
+      comment: "Pamarthi"
+      uid: 1010
+      group: tomcat
+      state: present
+

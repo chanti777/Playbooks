@@ -1,0 +1,4 @@
+packagename: tomcat7
+status: present
+username: ansible1
+permsize: 1024

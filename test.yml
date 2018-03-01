@@ -1,0 +1,22 @@
+---
+- hosts: ubuntu
+  become: yes
+  tasks:
+  - name: Install tomcat
+    apt:
+      name: {{ "packagename" }}
+      state: present
+    notify: 
+    - restart apache2
+  - name: Copy files
+    copy: 
+      src: /tmp/sample.yml
+      dest: /tmp/test/sample.yml
+    notify: 
+    - restart apache2
+  handlers:
+  - listen: restart apache2
+    service:
+       name: apache2
+       state: restarted 
+

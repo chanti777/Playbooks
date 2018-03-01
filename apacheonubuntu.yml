@@ -1,0 +1,14 @@
+---
+- hosts: ubuntu
+  become: yes
+  tasks:
+   - name: Install Apache
+     apt:
+        name: apache2
+        state: present
+   - name: Update Packages
+     apt:
+        update_cache: yes
+   - service:
+       name: apache2
+       state: started

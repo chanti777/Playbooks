@@ -1,0 +1,11 @@
+---
+- hosts: redhat
+  become: yes
+  tasks: 
+   - name: Install Tomcat7 on redhat
+     yum:
+       name: tomcat 
+       state: present
+   - service:
+      name: tomcat
+      state: started

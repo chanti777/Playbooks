@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: using debug
+    command: hostname -f
+    register: cmd_content
+  - name: Print variable contents
+    debug:
+      msg: "{{ cmd_content }}"

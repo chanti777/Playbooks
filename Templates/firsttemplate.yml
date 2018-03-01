@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Basic template with no dynamic content
+    template: 
+       src: basic.j2
+       dest: /home/ansible/basic
+    template:
+       src: tomcat7.j2
+       dest: /home/default/tomcat7
