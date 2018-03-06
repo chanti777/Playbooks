@@ -4,3 +4,5 @@
   roles:
   - common
   - apache
+  - binarytemple.jenkins
+  - binarytemple.java
