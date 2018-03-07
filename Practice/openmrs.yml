@@ -1,0 +1,30 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: install Java8 on Ubuntu
+      apt:
+         name: default-jdk
+         state: present
+      when: ansible_os_family == "Debian"
+    - name: install Java8 on Redhat
+      yum:
+        name: java-1.8.0-openjdk-devel
+        state: present
+      when: ansible_os_family == "RedHat"
+    - name: Install tomcat on Ubuntu & Redhat
+      apt: 
+        name: tomcat7
+        state: present
+      when: ansible_os_family == "Debian"
+    - name: install tomcat on Rehat
+      yum: 
+        name: tomcat
+        state: present
+      when: ansible_os_family == "Redhat"
+ 
+
+
+      
+    
+      
