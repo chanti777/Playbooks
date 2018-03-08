@@ -1,1 +1,3 @@
 username: ansible2
+opnmrsurl: https://sourceforge.net/projects/openmrs/files/releases/OpenMRS_Platform_2.1.2/openmrs.war/download
+tomcat: /usr/share/tomcat/webapps/

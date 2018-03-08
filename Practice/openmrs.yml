@@ -14,14 +14,60 @@
       when: ansible_os_family == "RedHat"
     - name: Install tomcat on Ubuntu & Redhat
       apt: 
-        name: tomcat7
-        state: present
+        - name: tomcat7
+          state: present
+        - name: apache2
+          state: present
+      notify:
+      - restart apache2       
       when: ansible_os_family == "Debian"
     - name: install tomcat on Rehat
       yum: 
-        name: tomcat
-        state: present
+        - name: tomcat
+          state: present
+        - name: httpd
+          state: present
+      notify:
+      - restart httpd
       when: ansible_os_family == "Redhat"
+    - name: download and copy openmrs war file to tomcat webapps
+      get_url: 
+         url: "{{ openmrsurl }}"
+         dest: "{{ tomcat }}"
+      notify:
+      - restart tomcat
+      when: ansible_os_family == "RedHat"
+      get_url:
+          url:  "{{ openmrsurl }}"
+          dest: "{{ tomcat7 }}"
+      notify:
+      - restart tomcat
+      when: ansible_os_family == "Debian"
+      handlers:
+       - listen: restart httpd
+         service:
+             name: httpd
+             state: restarted
+       - listen: restart apache2
+         service:
+             name: apache2
+             state: restarted
+       - listen: restart tomcat
+         service: 
+             name: tomcat
+             state: restarted
+
+          
+    
+      
+
+         
+
+
+
+
+
+      
  
 
 
