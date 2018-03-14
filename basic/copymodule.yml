@@ -1,0 +1,10 @@
+---
+- hosts: redhat
+  become: yes
+  tasks:
+  - name: checking copy module
+    copy:
+    content: ""
+    dest: /tmp/test
+    force: yes
+

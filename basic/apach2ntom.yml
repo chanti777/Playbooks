@@ -6,6 +6,7 @@
     apt:
       name: "{{ item }}"
       state: present
+      enabled: yes
     with_items: 
       - apache2
       - tomcat7
