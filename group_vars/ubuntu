@@ -3,4 +3,4 @@ status: present
 username: ansible1
 permsize: 1024
 tomcat7: /var/lib/tomcat7/webapps/
-opnmrsurl: https://sourceforge.net/projects/openmrs/files/releases/OpenMRS_Platform_2.1.2/openmrs.war/download
+openmrsurl: https://sourceforge.net/projects/openmrs/files/releases/OpenMRS_Platform_2.1.2/openmrs.war/download

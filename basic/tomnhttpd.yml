@@ -1,0 +1,10 @@
+---
+- hosts: redhat
+  become: yes
+  taks:
+  - name: installing tomcat and httpd on redhat
+    yum: 
+         package: "{{ item }}"
+         state: present
+       with_items: "{{ httpd, tomcat }}""
+         
