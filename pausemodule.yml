@@ -8,6 +8,7 @@
     yum:
       name: httpd
       state: present
+  - name: Pasuing playbook
     pause:
       prompt: "Make sure the installation is complete..."
   - name: Verify Lynx Installation
