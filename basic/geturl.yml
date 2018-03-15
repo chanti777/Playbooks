@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: download openmrs.war and copy it to a location specified 
+    yum:
+      name: httpd
+      state: present

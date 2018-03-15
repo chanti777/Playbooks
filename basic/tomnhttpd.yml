@@ -6,5 +6,7 @@
     yum: 
          package: "{{ item }}"
          state: present
-       with_items: "{{ httpd, tomcat }}""
+       with_items: 
+       - httpd
+       - tomcat
          
