@@ -14,7 +14,7 @@
       seconds: 10
   - name: Verify Lynx Installation
     yum:
-      name: lynx
+      name: curl
       state: present
       
 
