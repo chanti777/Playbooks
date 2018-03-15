@@ -10,4 +10,4 @@
       mode: 0644
       owner: ansible
       group: ansible
-      #backup: yes
+      backup: yes
