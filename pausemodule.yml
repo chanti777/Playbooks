@@ -1,7 +1,7 @@
 ---
 # The Pasue Module
 - hosts: redhat
-  sudo: yes
+  become: yes
   gather_facts: no
   tasks:
   - name: Install httpd
@@ -12,7 +12,7 @@
     pause:
       #prompt: "Make sure the installation is complete..."
       seconds: 10
-  - name: Verify Lynx Installation
+  - name: Verify Curl Installation
     yum:
       name: curl
       state: present

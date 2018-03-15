@@ -1,0 +1,13 @@
+---
+# Copy Module Example
+- hosts: redhat
+  become: yes
+  tasks:
+  - name: Copy from the files directory test file
+    copy:
+      src: files/test1.txt
+      dest: /tmp/test1.txt
+      #mode: 0644
+      #owner: ansible
+      #group: ansible
+      #backup: yes
