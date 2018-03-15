@@ -5,9 +5,14 @@
   tasks:
   - name: Copy from the files directory test file
     copy:
+    - name: copy file to destination
       src: files/test4.txt
       dest: /tmp/test4.txt
       mode: 0644
       owner: ansible
       group: ansible
       backup: yes
+    - name: using content
+      content: "testing"
+      dest: /tmp/test
+      force: yes

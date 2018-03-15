@@ -4,7 +4,7 @@
   tasks:
   - name: checking copy module
     copy:
-      content: ""
+      content: "test"
       dest: /tmp/test
       force: yes
 
