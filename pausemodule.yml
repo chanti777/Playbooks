@@ -10,7 +10,8 @@
       state: present
   - name: Pasuing playbook
     pause:
-      prompt: "Make sure the installation is complete..."
+      #prompt: "Make sure the installation is complete..."
+      seconds: 10
   - name: Verify Lynx Installation
     yum:
       name: lynx
