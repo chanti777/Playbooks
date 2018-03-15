@@ -5,8 +5,8 @@
   tasks:
   - name: Copy from the files directory test file
     copy:
-      src: files/test2.txt
-      dest: /tmp/test2.txt
+      src: files/test4.txt
+      dest: /tmp/test4.txt
       mode: 0644
       owner: ansible
       group: ansible
