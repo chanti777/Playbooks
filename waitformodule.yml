@@ -12,6 +12,7 @@
     wait_for:
       port: 8080
       state: started
+      timeout: 50
   - name: Verify Curl Installation
     apt:
       name: curl
