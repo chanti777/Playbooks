@@ -5,7 +5,7 @@
   gather_facts: no
   tasks:
   - name: Install Apache tomcat
-    yum:
+    apt:
       name: tomcat7
       state: present
   - name: Waiting for the port to listen
@@ -13,6 +13,6 @@
       port: 8080
       state: started
   - name: Verify Curl Installation
-    yum:
+    apt:
       name: curl
       state: present
