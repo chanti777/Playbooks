@@ -13,6 +13,7 @@
       port: 8080
       state: started
       timeout: 50
+      ignore_errors: yes
   - name: Verify Curl Installation
     apt:
       name: curl
